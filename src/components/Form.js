@@ -49,5 +49,24 @@ class Form extends React.Component {
       generatedKey = this.state.preferedAlias;
       generatedURL = 'minilinkit.com/' + this.state.preferedAlias;
     }
+    // content added to firebase database
+    const db = getDatabase();
+    // set method passed to database and path of generated key
+    set(ref(db, '/' + generatedKey), {
+      generatedKey: generatedKey,
+      longURL: this.state.longURL,
+      preferedAlias: this.state.preferedAlias,
+      generatedURL: generatedURL,
+
+      //   after data is passed set state of generated url
+    })
+      .then((results) => {
+        this.setState({
+          generatedURL: generatedURL,
+          loading: false,
+        });
+      })
+      //   handle error
+      .catch((e) => {});
   };
 }
