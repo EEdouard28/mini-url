@@ -120,5 +120,38 @@ class Form extends React.Component {
           'The Alias you have entered already exists! Please enter another one =-)';
       }
     }
+    //update state of page
+    this.setState({
+      errors: errors,
+      errorMessages: errorMessages,
+      loading: false,
+    });
+    if (errors.length > 0) {
+      return false;
+    }
+    return true;
   };
+
+  //   Fetch database of alias inputted by user and checks if key exists
+  checkKeyExists = async () => {
+    const dbRef = ref(getDatabase());
+    return get(child(dbRef, `/${this.state.preferedAlias}`)).catch((error) => {
+      return false;
+    });
+  };
+
+  //   copies generated URL to clipboard
+  copyToClipBoard = () => {
+    navigator.clipboard.writeText(this.state.generatedURL);
+    this.setState({
+      toolTipMessage: 'Copied',
+    });
+  };
+  render() {
+    return (
+      <div classNmae="container">
+        <form autoComplte="off"></form>
+      </div>
+    );
+  }
 }
