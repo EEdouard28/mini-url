@@ -150,7 +150,61 @@ class Form extends React.Component {
   render() {
     return (
       <div classNmae="container">
-        <form autoComplte="off"></form>
+        <form autoComplte="off">
+          <h3>Mini Url!</h3>
+          <div className="form-group">
+            <input
+              id="longURL"
+              onChange={this.handleChange}
+              value={this.state.longURL}
+              type="url"
+              required
+              className={
+                this.hasError('longURL')
+                  ? 'form-control is-invalid'
+                  : 'form-control'
+              }
+              placeholder="https://www..."
+            />
+          </div>
+          <div
+            className={
+              this.hasError('longURL') ? 'text-danger' : 'visually-hidden'
+            }
+          >
+            {this.state.errorMessage.longURL}
+          </div>
+          {/*  */}
+          <div className="form-group">
+            <label htmlFor="basic-url">Your Mini URL</label>
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text">miniURL</span>
+              </div>
+              <input
+                id="preferedAlias"
+                onChange={this.handleChange}
+                value={this.state.preferedAlias}
+                className={
+                  this.hasError('preferedAlias')
+                    ? 'form-control is-invalid'
+                    : 'form-control'
+                }
+                type="text"
+                placeholder="eg. 3fwias (Optional)"
+              />
+            </div>
+            <div
+              className={
+                this.hassError('suggestedAlias')
+                  ? 'text-danger'
+                  : 'visually-hidden'
+              }
+            >
+              {this.state.errorMessage.suggestedAlias}
+            </div>
+          </div>
+        </form>
       </div>
     );
   }
