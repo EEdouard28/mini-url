@@ -5,7 +5,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from 'firebase/app';
-
 // Firebase database config
 const firebaseConfig = {
   apiKey: 'AIzaSyBmIzrBsw2_xkfKHyBi-NnMsgHlbnlL9kw',
