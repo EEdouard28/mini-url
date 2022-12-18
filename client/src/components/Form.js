@@ -149,8 +149,8 @@ class Form extends React.Component {
   };
   render() {
     return (
-      <div classNmae="container">
-        <form autoComplte="off">
+      <div className="container">
+        <form autoComplete="off">
           <h3>Mini Url!</h3>
           <div className="form-group">
             <input
