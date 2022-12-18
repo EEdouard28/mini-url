@@ -1,23 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from 'firebase/app';
-// Firebase database config
-const firebaseConfig = {
-  apiKey: 'AIzaSyBmIzrBsw2_xkfKHyBi-NnMsgHlbnlL9kw',
-  authDomain: 'mini-url-d15ac.firebaseapp.com',
-  projectId: 'mini-url-d15ac',
-  storageBucket: 'mini-url-d15ac.appspot.com',
-  messagingSenderId: '581436341123',
-  appId: '1:581436341123:web:8ecaa560d616847290d4b6',
-  measurementId: 'G-Q594VB2WJY',
-};
-initializeApp(firebaseConfig);
-{
-}
+
+const firebaseConfig = {};
 
 initializeApp(firebaseConfig);
 ReactDOM.render(

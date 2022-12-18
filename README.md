@@ -4,7 +4,7 @@
 
 
 # miniURL
-
+URL Shortener web application
 
 
 ## Table of Contents

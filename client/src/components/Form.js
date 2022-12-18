@@ -196,7 +196,7 @@ class Form extends React.Component {
             </div>
             <div
               className={
-                this.hassError('suggestedAlias')
+                this.hasError('suggestedAlias')
                   ? 'text-danger'
                   : 'visually-hidden'
               }
