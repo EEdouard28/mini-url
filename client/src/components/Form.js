@@ -7,7 +7,7 @@ import { getDatabase, child, ref, set, get } from 'firebase/database';
 import { isWebUri } from 'valid-url';
 import { OverlayTrigger } from 'react-bootstrap';
 // message
-import Tooltip from 'react-bootstrap';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 class Form extends React.Component {
   constructor(props) {
