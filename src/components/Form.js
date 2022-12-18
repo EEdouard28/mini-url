@@ -98,5 +98,27 @@ class Form extends React.Component {
       errorMessages['longUrl'] =
         'Please place a URL in form of htttps://www....';
     }
+
+    // Prefered Alias
+    if (this.state.preferedAlias !== '') {
+      // if characters is more than 7 characters return error
+      if (this.state.preferedAlias.length > 7) {
+        errors.push('suggestedAlias');
+        errorMessages['suggestedAlias'] =
+          'Please Enter an Alias less than 7 Characters';
+        //checks to see if preferred alias has space
+      } else if (this.state.preferedAlias.indexOf(' ') >= 0) {
+        errors.push('suggestedAlias');
+        errorMessages['suggestedAlias'] = 'Spaces are not allowed in URLS';
+      }
+      //   does url already exist?
+      var keyExists = await this.checkKeyExists();
+
+      if (keyExists.exists()) {
+        errors.push('suggestedAlias');
+        errorMessages['suggestedAlias'] =
+          'The Alias you have entered already exists! Please enter another one =-)';
+      }
+    }
   };
 }
