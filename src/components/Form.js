@@ -69,30 +69,34 @@ class Form extends React.Component {
       //   handle error
       .catch((e) => {});
   };
+  // checks if field has an error
+  hasError = (key) => {
+    return this.state.errors.indexOf(key) !== -1;
+  };
+
+  // Save the content of the form as the user is typing!
+  handleChange = (e) => {
+    const { id, value } = e.target;
+    this.setState((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
+  // ensure form input is valid
+  validateInput = async () => {
+    var errors = [];
+    var errorMessages = this.state.errorMessage;
+
+    //   validate long URL
+    //   if url length is 0 error messages is returned
+    if (this.state.longURL.length === 0) {
+      errors.push('longURL');
+      errorMessages['longURL'] = 'Please enter your URL!';
+      // if url is not a proper url
+    } else if (!isWebUri(this.state.longURL)) {
+      errors.push('longURL');
+      errorMessages['longUrl'] =
+        'Please place a URL in form of htttps://www....';
+    }
+  };
 }
-// checks if field has an error
-hasError = (key) => {
-  return this.state.errors.indexOf(key) !== -1;
-};
-
-// Save the content of the form as the user is typing!
-handleChange = (e) => {
-  const { id, value } = e.target;
-  this.setState((prevState) => ({
-    ...prevState,
-    [id]: value,
-  }));
-};
-validateInput = async () => {
-  var errors = [];
-  var errorMessages = this.state.errorMessage;
-
-  //   validate long URL
-  if (this.state.longURL.length === 0) {
-    errors.push('longURL');
-    errorMessages['longURL'] = 'Please enter your URL!';
-  } else if (!isWebUri(this.state.longURL)) {
-    errors.push('longURL');
-    errorMessages['longUrl'] = 'Please place a URL in form of htttps://www....';
-  }
-};
