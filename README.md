@@ -1,6 +1,7 @@
 ### Built With
 [![React][reactjs.org]][reactjs-url]  
 [![React-Bootstrap][getbootstrap.com]][react-bootstrap-url]  
+[![Python][python.org]][python-url]  
 [![Firebase][firebase.google.com]][firebase-url] 
 
 
@@ -50,5 +51,7 @@ Feel free to contact me via my github linked below.
 [reactjs.org]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-bootstrap-url]: https://react-bootstrap.github.io/
 [getbootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[python-url]: https://www.python.org/
+[python.org]: https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue
 [firebase-url]: https://firebase.google.com/
 [firebase.google.com]: https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black
