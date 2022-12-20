@@ -14,7 +14,7 @@ default_app = firebase_admin.initialize_app(cred_obj, {
 
 # Initialize flask app
 app = Flask(__name__, static_folder='./build/static',
-            template_folder='./build')
+            template_folder="./build")
 
 
 @app.route("/")
@@ -31,7 +31,7 @@ def homepage():
 
 @app.route('/<path:generatedKey>', methods=['GET'])
 def fetch_from_firebase(generatedKey):
-    ref = db.reference('/' + generatedKey)
+    ref = db.reference("/" + generatedKey)
     data = ref.get()
     if not data:
         return '404 not found'
