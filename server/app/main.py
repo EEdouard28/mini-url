@@ -4,6 +4,7 @@ import firebase_admin
 from firebase_admin import db
 import os
 
+
 # Provides python app access to firebase database
 cred_obj = firebase_admin.credentials.Certificate(
     './ServiceAccountKey.json')
