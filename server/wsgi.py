@@ -1,6 +1,6 @@
 # gateway into the application
-from app.main import app
+from app.app import app
 
 # triggers application
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run()
