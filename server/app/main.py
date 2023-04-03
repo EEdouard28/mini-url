@@ -6,8 +6,7 @@ import os
 
 
 # Provides python app access to firebase database
-cred_obj = firebase_admin.credentials.Certificate(
-    './ServiceAccountKey.json')
+cred_obj = firebase_admin.credentials.Certificate('./ServiceAccountKey.json')
 # Allows access to the database
 default_app = firebase_admin.initialize_app(cred_obj, {
     'databaseURL': 'https://mini-url-d15ac-default-rtdb.firebaseio.com/'
