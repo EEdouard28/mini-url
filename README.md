@@ -1,4 +1,4 @@
-### Built With
+pip install --force-reinstall wsgi### Built With
 [![React][reactjs.org]][reactjs-url]  
 [![React-Bootstrap][getbootstrap.com]][react-bootstrap-url]  
 [![Python][python.org]][python-url]  

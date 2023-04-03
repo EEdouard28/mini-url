@@ -41,3 +41,4 @@ six==1.16.0
 uritemplate==4.1.1
 urllib3==1.26.13
 Werkzeug==2.2.2
+wsgi==22.3.1
